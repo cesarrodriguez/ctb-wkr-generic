@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  ctb-wkr-agepedido:
+    build: .
+    environment:
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: http://broker:29092
+      SPRING_KAFKA_PROPERTIES_SCHEMA_REGISTRY_URL: http://schema-registry:8081
+      SPRING_KAFKA_CONSUMER_PROPERTIES_SCHEMA_REGISTRY_URL: http://schema-registry:8081
+      SPRING_KAFKA_PRODUCER_PROPERTIES_SCHEMA_REGISTRY_URL: http://schema-registry:8081
+      LOGGING_LEVEL_ROOT: INFO
+      LOGGING_BR_COM_BEN: INFO
+      SERVER_PORT: 8080
+networks:
+  default:
+    external:
+      name: rmoff_kafka

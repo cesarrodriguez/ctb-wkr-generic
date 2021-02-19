@@ -1,0 +1,12 @@
+[
+    {
+        "fieldCodigoEvento": "idBoleto",
+        "fieldDataEvento": "dataAgendamento",
+        "fieldTipoOperacao": "CREDITO",
+        "fieldValor": "valor",
+        "isTipoOperacaoFixo": true,
+        "ledger": "PEDIDO_RECEBIMENTO_PENDENTE",
+        "tipoEvento": "AGENDAMENTO_PEDIDO",
+        "topicPartition": 3
+    }
+]

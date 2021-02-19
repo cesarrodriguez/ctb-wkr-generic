@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  ctb-wkr-${workerName}:
+    build: .
+    environment:
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: ${host}:${port-kafka}
+      SPRING_KAFKA_PROPERTIES_SCHEMA_REGISTRY_URL: ${host}:${port-schema-registry}
+      SPRING_KAFKA_CONSUMER_PROPERTIES_SCHEMA_REGISTRY_URL: ${host}:${port-schema-registry}
+      SPRING_KAFKA_PRODUCER_PROPERTIES_SCHEMA_REGISTRY_URL: ${host}:${port-schema-registry}
+      LOGGING_LEVEL_ROOT: INFO
+      LOGGING_BR_COM_BEN: INFO
+      SERVER_PORT: 8080
+networks:
+  default:
+    external:
+      name: rmoff_kafka

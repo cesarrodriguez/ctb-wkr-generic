@@ -1,16 +1,16 @@
 # README #
- ctb-wkr-${workerName}
- Worker relacionado a notificação de ${workerNameTitleSpace}.
+ ctb-wkr-agepedido
+ Worker relacionado a notificação de Agendamento Pedido.
  
 ### What is this repository for? ###
 
 Dados relacionados ao worker:
 
-tópico origem [governado]: topic-conf-${topicName}
+tópico origem [governado]: topic-conf-agendamento-pedido
 
 tópico destino [ interno time financeiro]: topic-req-contabil-transacao
 
-avro origem: http://schema_registry:8081/subjects/topic-conf-${topicName}-value/versions
+avro origem: http://schema_registry:8081/subjects/topic-conf-agendamento-pedido-value/versions
 
 avro destino: http://schema_registry:8081/subjects/topic-req-contabil-transacao-value/versions
 
